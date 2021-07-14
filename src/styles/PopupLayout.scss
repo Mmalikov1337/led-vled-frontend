@@ -1,0 +1,93 @@
+.popup {
+    background-color: #00000034;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    // align-content: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+
+    &__card {
+        width: 582px;
+        height: 344px;
+        background: #008CE6;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        padding: 50px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title {
+            font-weight: 900;
+            font-size: 48px;
+            line-height: 48px;
+            color: #FFFFFF;
+            padding: 0;
+            margin: 0;
+        }
+
+        .description {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 18px;
+            color: #FFFFFF;
+            margin-top: 0;
+        }
+
+        .button {
+
+            // &__next {
+            div {
+                cursor: pointer;
+                width: 228px;
+                height: 60px;
+                background: #FFC700;
+                box-shadow: 0px 16px 24px rgba(239, 45, 59, 0.2), 0px 2px 6px rgba(239, 45, 59, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.04);
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                span {
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: #2F2F2F;
+
+                    font-weight: bold;
+                }
+
+                div {
+                    background: linear-gradient(135deg, #F2BD00 0%, #FFD100 100%);
+                    box-shadow: -5px 5px 10px rgba(224, 179, 0, 0.2), 5px -5px 10px rgba(224, 179, 0, 0.2), -5px -5px 10px rgba(255, 219, 0, 0.9), 5px 5px 13px rgba(224, 179, 0, 0.9), inset 1px 1px 2px rgba(255, 219, 0, 0.3), inset -1px -1px 2px rgba(224, 179, 0, 0.5);
+                    border-radius: 15px;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-content: center;
+                    justify-content: center;
+                    margin: 0 0 0 15px;
+                    // svg {}
+                }
+            }
+
+            // }
+        }
+
+        .pic {
+            position: absolute;
+            width: auto;
+            height: 71%;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}

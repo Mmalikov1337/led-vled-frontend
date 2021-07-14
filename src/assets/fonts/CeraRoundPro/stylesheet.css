@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Cera Round Pro';
+    src: url('CeraRoundPro-Medium.eot');
+    src: url('CeraRoundPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('CeraRoundPro-Medium.woff2') format('woff2'),
+        url('CeraRoundPro-Medium.woff') format('woff'),
+        url('CeraRoundPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cera Round Pro';
+    src: url('CeraRoundPro-Thin.eot');
+    src: url('CeraRoundPro-Thin.eot?#iefix') format('embedded-opentype'),
+        url('CeraRoundPro-Thin.woff2') format('woff2'),
+        url('CeraRoundPro-Thin.woff') format('woff'),
+        url('CeraRoundPro-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cera Round Pro';
+    src: url('CeraRoundPro-Bold.eot');
+    src: url('CeraRoundPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('CeraRoundPro-Bold.woff2') format('woff2'),
+        url('CeraRoundPro-Bold.woff') format('woff'),
+        url('CeraRoundPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cera Round Pro';
+    src: url('CeraRoundPro-Black.eot');
+    src: url('CeraRoundPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('CeraRoundPro-Black.woff2') format('woff2'),
+        url('CeraRoundPro-Black.woff') format('woff'),
+        url('CeraRoundPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cera Round Pro';
+    src: url('CeraRoundPro-Regular.eot');
+    src: url('CeraRoundPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('CeraRoundPro-Regular.woff2') format('woff2'),
+        url('CeraRoundPro-Regular.woff') format('woff'),
+        url('CeraRoundPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cera Round Pro';
+    src: url('CeraRoundPro-Light.eot');
+    src: url('CeraRoundPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('CeraRoundPro-Light.woff2') format('woff2'),
+        url('CeraRoundPro-Light.woff') format('woff'),
+        url('CeraRoundPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

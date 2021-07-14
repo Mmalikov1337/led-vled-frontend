@@ -1,0 +1,65 @@
+@import "./Order/Cart/Cart.scss";
+@import "./Order/Delivery/Delivery.scss";
+@import "./Order/Payment/Payment.scss";
+@import "./Order/Order.scss";
+
+@import "./StartPage/StartPageComposition/StartPageComposition.scss";
+@import "./StartPage/StartPageHeader/StartPageHeader.scss";
+@import "./StartPage/StartPage.scss";
+
+@import "./Catalog/ProductSlider/ProductSlider.scss";
+@import "./Catalog/ProductList/ProductList.scss";
+
+@import "./Swiper/Elements/Composition/Composition.scss";
+@import "./Swiper/Elements/Contacts/Contacts.scss";
+@import "./Swiper/Elements/Delivery/Delivery.scss";
+@import "./Swiper/Elements/Partners/Partners.scss";
+@import "./Swiper/Elements/Price/Price.scss";
+@import "./Swiper/Elements/Tastes/Tastes.scss";
+@import "./Swiper/Elements/Usage/Usage.scss";
+@import "./Swiper/Elements/Elements.scss";
+@import "./Swiper/Swiper.scss";
+
+@import "./Policy/Policy.scss";
+
+@import "./PopupLayout.scss";
+
+@import "./../assets/fonts/CeraRoundPro/stylesheet.css";
+// @import "./common.scss";
+body {
+	margin: 0;
+	overflow-x: hidden !important;
+  }
+  
+button{
+	background-color: transparent;
+	outline: none;
+	border: none;
+}
+
+.app {
+	&__container {
+		// width: 95%;
+		// margin: 0 auto;
+		transition: all 1s;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.blue {
+		background: #F0F9FF;
+		opacity: 0;
+		width: 100%;
+		padding-left: 2.5%;
+	}
+	.white{
+		width: 95%;
+		margin: 0 auto;
+	}
+}
+.container{
+	width: 95%;
+	margin: 0 auto;
+}

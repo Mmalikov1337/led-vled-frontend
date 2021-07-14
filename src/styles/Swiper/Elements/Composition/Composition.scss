@@ -1,0 +1,161 @@
+$maxWidth: 1920;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+.composition {
+	height: 100%;
+	display: flex;
+	// align-content: center;
+
+	&__wrapper {
+		display: flex;
+		// justify-content: space-between;
+		height: 100%;
+		justify-content: space-between;
+
+		.text-part {
+			// width: fit-content;
+			flex: 0 0 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		&__title {
+			font-family: 'Cera Round Pro';
+
+			h2 {
+				margin-top: 0;
+				// font-size: adaptiv-font(72px, 20px);
+				font-weight: 900;
+				// line-height: 70px;
+				width: min-content;
+				@include adaptiv-font(72, 36);
+			}
+		}
+
+		&__under-title {
+			display: grid;
+			grid-template-columns: 40% 60%;
+
+			&__button {
+				div {
+					cursor: pointer;
+					width: 185px;
+					height: 60px;
+					background: #FFC700;
+					box-shadow: 0px 16px 24px rgba(239, 45, 59, 0.2), 0px 2px 6px rgba(239, 45, 59, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.04);
+					border-radius: 15px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					// gap: 15px;
+
+					span {
+						font-family: 'Cera Round Pro';
+						font-weight: bold;
+						font-size: 18px;
+						color: rgb(0, 0, 0);
+					}
+
+					div {
+						background: linear-gradient(135deg, #F2BD00 0%, #FFD100 100%);
+						box-shadow: -5px 5px 10px rgba(224, 179, 0, 0.2), 5px -5px 10px rgba(224, 179, 0, 0.2), -5px -5px 10px rgba(255, 219, 0, 0.9), 5px 5px 13px rgba(224, 179, 0, 0.9), inset 1px 1px 2px rgba(255, 219, 0, 0.3), inset -1px -1px 2px rgba(224, 179, 0, 0.5);
+						border-radius: 15px;
+						width: 30px;
+						height: 30px;
+						display: flex;
+						align-content: center;
+						justify-content: center;
+						margin: 0 0 0 15px;
+
+						// svg {}
+					}
+				}
+			}
+
+			&__description {
+				font-family: 'Cera Round Pro';
+
+				&__top {
+					max-width: 286px;
+					font-weight: 500;
+					font-size: 18px;
+					line-height: 25px;
+					margin-top: 0;
+				}
+
+				&__list {
+					list-style: none;
+					padding: 0;
+					margin: 0;
+
+					&-title {
+						font-family: 'Cera Round Pro';
+						font-weight: 900;
+						font-size: 24px;
+						margin: 0 0 15px 0;
+					}
+
+					&__item {
+						margin-bottom: 18px;
+						font-weight: 500;
+						font-size: 18px;
+						line-height: 18px;
+
+						&:last-child {
+							margin-bottom: 30px;
+						}
+
+						&::before {
+							content: "• ";
+							color: #F2BD00;
+						}
+
+						span {
+							display: block;
+							font-size: 16px;
+							line-height: 16px;
+							margin-top: 5px;
+							margin-left: 14px;
+							width: 228px; ////
+							height: 32px;
+						}
+					}
+				}
+
+				&__bottom {
+					font-family: 'Cera Round Pro';
+					font-style: normal;
+					font-weight: 500;
+					font-size: 18px;
+					line-height: 25px;
+					padding: 0;
+					margin: 0;
+
+					span {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+
+		// background: url("./../../../../assets/images/snow-flake-start-page.svg") center center no-repeat;
+		&__circle {
+			display: flex;
+			align-items: center;
+			// transform: translateX(-15%);
+			flex: 0 0 40%;
+			img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+	}
+}
