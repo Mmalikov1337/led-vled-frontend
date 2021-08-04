@@ -10,17 +10,18 @@
 @import "./Catalog/ProductSlider/ProductSlider.scss";
 @import "./Catalog/ProductList/ProductList.scss";
 
-@import "./Swiper/Elements/Composition/Composition.scss";
-@import "./Swiper/Elements/Contacts/Contacts.scss";
-@import "./Swiper/Elements/Delivery/Delivery.scss";
-@import "./Swiper/Elements/Partners/Partners.scss";
-@import "./Swiper/Elements/Price/Price.scss";
-@import "./Swiper/Elements/Tastes/Tastes.scss";
-@import "./Swiper/Elements/Usage/Usage.scss";
-@import "./Swiper/Elements/Elements.scss";
-@import "./Swiper/Swiper.scss";
+@import "./BluePage/Elements/Composition/Composition.scss";
+@import "./BluePage/Elements/Contacts/Contacts.scss";
+@import "./BluePage/Elements/Delivery/Delivery.scss";
+@import "./BluePage/Elements/Partners/Partners.scss";
+@import "./BluePage/Elements/Price/Price.scss";
+@import "./BluePage/Elements/Tastes/Tastes.scss";
+@import "./BluePage/Elements/Usage/Usage.scss";
+@import "./BluePage/Elements/Elements.scss";
+@import "./BluePage/BluePage.scss";
 
 @import "./Policy/Policy.scss";
+@import "./Errors/NotFound.scss";
 
 @import "./PopupLayout.scss";
 

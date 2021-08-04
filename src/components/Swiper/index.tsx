@@ -69,10 +69,10 @@ const links = [
 
 const LinksList = ({ links, currentPage, setCurrentPage }) => {
 	return (
-		<ul className="swiper__navbar__list">
+		<ul className="blue_page__navbar__list">
 			{links.map((it, index) => (
 				<li
-					className={`swiper__navbar__list__link ${currentPage === index ? "active" : ""}`}
+					className={`blue_page__navbar__list__link ${currentPage === index ? "active" : ""}`}
 					onClick={() => setCurrentPage(index)}
 					key={index}
 				>
@@ -108,9 +108,9 @@ const ArrowSVG = ({ toUp, func, active, setActive }) => {
 };
 function Footer(currentPage) {
 	return (
-		<div className="swiper__footer">
-			<div className="swiper__footer__wrapper">
-				<div className="swiper__footer__wrapper__logo">
+		<div className="blue_page__footer">
+			<div className="blue_page__footer__wrapper">
+				<div className="blue_page__footer__wrapper__logo">
 					<img src={logo_whiteSVG} alt="logo_whiteSVG" />
 				</div>
 				<Feedback currentPage={currentPage} />
@@ -120,16 +120,16 @@ function Footer(currentPage) {
 }
 const Feedback = ({ currentPage }) => {
 	return (
-		<div className="swiper__footer__wrapper__feedback">
+		<div className="blue_page__footer__wrapper__feedback">
 			{currentPage !== 6 && (
 				<React.Fragment>
-					<div className="swiper__footer__wrapper__feedback__phone">
+					<div className="blue_page__footer__wrapper__feedback__phone">
 						<span>8 800 800 - 80 - 80</span>
 					</div>
-					<div className="swiper__footer__wrapper__feedback__mail">
+					<div className="blue_page__footer__wrapper__feedback__mail">
 						<span>info@ledvled.ru</span>
 					</div>
-					<div className="swiper__footer__wrapper__feedback__adress">
+					<div className="blue_page__footer__wrapper__feedback__adress">
 						<span>ООО «Глобал» г. Россия, Омск, ул. Звездова 129</span>
 					</div>
 				</React.Fragment>
@@ -201,15 +201,15 @@ export default function Swiper({ id, link, toStarterPage, newSwiperPage }) {
 	};
 
 	return (
-		<div className="swiper" id={id}>
+		<div className="blue_page" id={id}>
 			<div
-				className={`swiper__background ${heightOfLine ? `${heightOfLine}-bg` : ""}`}
+				className={`blue_page__background ${heightOfLine ? `${heightOfLine}-bg` : ""}`}
 				style={links[currentPage].style}
 			></div>
 
-			<div className="swiper__navbar">
+			<div className="blue_page__navbar">
 				<LinksList links={links} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-				<div className="swiper__navbar__catalog">
+				<div className="blue_page__navbar__catalog">
 					<svg
 						width="30"
 						height="16"
@@ -225,31 +225,31 @@ export default function Swiper({ id, link, toStarterPage, newSwiperPage }) {
 				</div>
 			</div>
 			<div className="main-block" id="main-block">
-				<div className="swiper__sidebar">
+				<div className="blue_page__sidebar">
 					<div className="sidebar-container">
-						<div className="swiper__sidebar__hash">
+						<div className="blue_page__sidebar__hash">
 							<p>
 								<span>#</span>лёдвлёд
 							</p>
 						</div>
-						<div className="swiper__sidebar__progress-line">
-							<div className="swiper__sidebar__progress-line__index">0{currentPage + 1}</div>
-							<div className="swiper__sidebar__progress-line__line-holder">
+						<div className="blue_page__sidebar__progress-line">
+							<div className="blue_page__sidebar__progress-line__index">0{currentPage + 1}</div>
+							<div className="blue_page__sidebar__progress-line__line-holder">
 								<div
-									className={`swiper__sidebar__progress-line__line-holder__line ${
+									className={`blue_page__sidebar__progress-line__line-holder__line ${
 										heightOfLine ? heightOfLine : ""
 									}`}
 								></div>
-								<div className="swiper__sidebar__progress-line__line-holder__arrows">
+								<div className="blue_page__sidebar__progress-line__line-holder__arrows">
 									<ArrowSVG toUp={true} func={toTop} active={active} setActive={setActive} />
 									<ArrowSVG toUp={false} func={toBottom} active={active} setActive={setActive} />
 								</div>
 							</div>
-							<div className="swiper__sidebar__progress-line__page">{links[currentPage].title}</div>
+							<div className="blue_page__sidebar__progress-line__page">{links[currentPage].title}</div>
 						</div>
 					</div>
 				</div>
-				<div className="swiper__main" ref={link}>
+				<div className="blue_page__main" ref={link}>
 					<Elements
 						toTop={toTop}
 						toBottom={toBottom}
@@ -257,7 +257,7 @@ export default function Swiper({ id, link, toStarterPage, newSwiperPage }) {
 						swiperPause={swiperPause}
 					/>
 				</div>
-				<div className="swiper__logo">
+				<div className="blue_page__logo">
 					<p className="elements__background-holder__logo">
 						Сделано в <span>REJI</span>
 					</p>

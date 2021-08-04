@@ -104,31 +104,33 @@ export default function Contacts({ onLoad }) {
 							</div>
 							<p>г. Омск, ул. Звездова 129. ООО «Глобал»</p>
 						</div>
-						<div
-							className={`${
-								onLoad
-									? "contacts__content__bottom__contacts__policy contacts__content__bottom__contacts__policy--active"
-									: "contacts__content__bottom__contacts__policy"
-							}`}
-						>
-							<p>
-								<Link href="/privacy-policy">
-									<a>Политика в области обработки персональных данных</a>
-								</Link>
-							</p>
-						</div>
-						<div
-							className={`${
-								onLoad
-									? "contacts__content__bottom__contacts__policy contacts__content__bottom__contacts__policy--active"
-									: "contacts__content__bottom__contacts__policy"
-							}`}
-						>
-							<p>
-								<Link href="/refund-policy">
-									<a>Политика в области возврата</a>
-								</Link>
-							</p>
+						<div className="contacts__links_wrapper">
+							<div
+								className={`${
+									onLoad
+										? "contacts__content__bottom__contacts__policy contacts__content__bottom__contacts__policy--active"
+										: "contacts__content__bottom__contacts__policy"
+								}`}
+							>
+								<p>
+									<Link href="/privacy-policy">
+										<a>Политика в области обработки персональных данных</a>
+									</Link>
+								</p>
+							</div>
+							<div
+								className={`${
+									onLoad
+										? "contacts__content__bottom__contacts__policy-ref contacts__content__bottom__contacts__policy--active"
+										: "contacts__content__bottom__contacts__policy-ref "
+								}`}
+							>
+								<p>
+									<Link href="/refund-policy">
+										<a>Политика в области возврата</a>
+									</Link>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
