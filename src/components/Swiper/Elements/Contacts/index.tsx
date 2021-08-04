@@ -112,7 +112,7 @@ export default function Contacts({ onLoad }) {
 							}`}
 						>
 							<p>
-								<Link href="/policy">
+								<Link href="/privacy-policy">
 									<a>Политика в обработки персональных данных</a>
 								</Link>
 							</p>

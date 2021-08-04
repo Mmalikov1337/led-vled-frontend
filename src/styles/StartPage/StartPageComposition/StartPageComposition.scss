@@ -3,7 +3,9 @@
 	background: url('./../../../assets/images/snow-flake-start-page.svg') bottom center no-repeat, #F0F9FF;
 	height: 88vh; ////
 	// top: 120px;
-
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	.wrapper {
 		// display: grid;
 		// grid-template-columns: 50% 50%; ////
@@ -190,8 +192,12 @@
 		&__main {
 			display: flex;
 			align-items: center;
+			flex-basis: 70%;
+			justify-content: flex-end;
 
 			&__section {
+				width: 100%;
+
 				&__item {
 					display: flex;
 					justify-content: left;
@@ -219,6 +225,7 @@
 						display: flex;
 						align-items: center;
 						justify-content: center;
+						width: 100%;
 
 						svg {
 							width: 100%;

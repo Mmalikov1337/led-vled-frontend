@@ -1,5 +1,5 @@
 {
-  "name": "zxc",
+  "name": "led-vled-frontend",
   "version": "0.0.1",
   "scripts": {
     "start-webpack": "webpack serve --config webpack.dev.config.ts",
