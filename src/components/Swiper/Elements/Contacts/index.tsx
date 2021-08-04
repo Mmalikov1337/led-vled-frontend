@@ -113,7 +113,20 @@ export default function Contacts({ onLoad }) {
 						>
 							<p>
 								<Link href="/privacy-policy">
-									<a>Политика в обработки персональных данных</a>
+									<a>Политика в области обработки персональных данных</a>
+								</Link>
+							</p>
+						</div>
+						<div
+							className={`${
+								onLoad
+									? "contacts__content__bottom__contacts__policy contacts__content__bottom__contacts__policy--active"
+									: "contacts__content__bottom__contacts__policy"
+							}`}
+						>
+							<p>
+								<Link href="/refund-policy">
+									<a>Политика в области возврата</a>
 								</Link>
 							</p>
 						</div>

@@ -64,15 +64,15 @@ function PersonalDataLayout(props) {
 	return (
 		<React.Fragment>
 			{/* <StartPageHeader/> */}
-			<div className="personal-data">
-				<div className="personal-data__side">
-					<p className="personal-data__side__logo">
+			<div className="policy">
+				<div className="policy__side">
+					<p className="policy__side__logo">
 						Сделано в <span>REJI</span>
 					</p>
 				</div>
-				<div className="personal-data__container">
-					<div className="personal-data__container__back-container">
-						<button className="personal-data__buttons__prew" onClick={() => Router.back()}>
+				<div className="policy__container">
+					<div className="policy__container__back-container">
+						<button className="policy__buttons__prew" onClick={() => Router.back()}>
 							<div>
 								<span>Назад</span>
 								<div>
@@ -93,21 +93,21 @@ function PersonalDataLayout(props) {
 						</button>
 					</div>
 
-					<div className="personal-data__content">{props.children}</div>
+					<div className="policy__content">{props.children}</div>
 				</div>
-				<div className="personal-data__footer">
-					<div className="personal-data__footer__wrapper">
-						<div className="personal-data__footer__wrapper__logo">
+				<div className="policy__footer">
+					<div className="policy__footer__wrapper">
+						<div className="policy__footer__wrapper__logo">
 							<img src={logoSVG} alt="logo_whiteSVG" />
 						</div>
-						<div className="personal-data__footer__wrapper__feedback">
-							<div className="personal-data__footer__wrapper__feedback__phone">
+						<div className="policy__footer__wrapper__feedback">
+							<div className="policy__footer__wrapper__feedback__phone">
 								<span>8 800 800 - 80 - 80</span>
 							</div>
-							<div className="personal-data__footer__wrapper__feedback__mail">
+							<div className="policy__footer__wrapper__feedback__mail">
 								<span>info@ledvled.ru</span>
 							</div>
-							<div className="personal-data__footer__wrapper__feedback__adress">
+							<div className="policy__footer__wrapper__feedback__adress">
 								<span>ООО «Глобал» г. Омск, ул. Звездова 129</span>
 							</div>
 						</div>

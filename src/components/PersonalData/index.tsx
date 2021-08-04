@@ -5,7 +5,6 @@ import React from "react";
 import Link from "next/link";
 export default function PersonalData() {
 	const [isLoaded, setIsLoaded] = React.useState(false);
-	let ls: LocalStorageHepler = isLoaded ? new LocalStorageHepler(null) : null;
 
 	React.useEffect(() => {
 		setIsLoaded(true);
@@ -13,18 +12,18 @@ export default function PersonalData() {
 	}, []);
 
 	return (
-		<div className="personal">
-			<div className="personal__container">
-				<div className="personal__title">
+		<div className="policy_content">
+			<div className="policy_content__container">
+				<div className="policy_content__title">
 					<h3>Политика в отношении обработки персональных данных</h3>
 				</div>
 
-				<div className="personal__subtitle">
+				<div className="policy_content__subtitle">
 					<h4>
 						<span>1.</span> Общие положения
 					</h4>
 				</div>
-				<section className="personal__section">
+				<section className="policy_content__section">
 					<p>
 						Настоящая политика обработки персональных данных составлена в соответствии с
 						требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и
@@ -50,12 +49,12 @@ export default function PersonalData() {
 					</p>
 				</section>
 
-				<div className="personal__subtitle">
+				<div className="policy_content__subtitle">
 					<h4>
 						<span>2.</span> Основные понятия, используемые в Политике
 					</h4>
 				</div>
-				<section className="personal__section">
+				<section className="policy_content__section">
 					<p>
 						2.1. Автоматизированная обработка персональных данных – обработка персональных данных с
 						помощью средств вычислительной техники;
@@ -144,12 +143,12 @@ export default function PersonalData() {
 					</p>
 				</section>
 
-				<div className="personal__subtitle">
+				<div className="policy_content__subtitle">
 					<h4>
 						<span>3.</span> Оператор может обрабатывать следующие персональные данные Пользователя
 					</h4>
 				</div>
-				<section className="personal__section">
+				<section className="policy_content__section">
 					<p>3.1. Фамилия, имя, отчество;</p>
 					<p>3.2. Электронный адрес;</p>
 					<p>3.3. Номера телефонов;</p>
@@ -165,12 +164,12 @@ export default function PersonalData() {
 					</p>
 				</section>
 
-				<div className="personal__subtitle">
+				<div className="policy_content__subtitle">
 					<h4>
 						<span>4.</span> Цели обработки персональных данных
 					</h4>
 				</div>
-				<section className="personal__section">
+				<section className="policy_content__section">
 					<p>
 						4.1. Цель обработки персональных данных Пользователя — информирование Пользователя
 						посредством отправки электронных писем; уточнение деталей заказа.
@@ -193,12 +192,12 @@ export default function PersonalData() {
 					</p>
 				</section>
 
-				<div className="personal__subtitle">
+				<div className="policy_content__subtitle">
 					<h4>
 						<span>5.</span> Правовые основания обработки персональных данных
 					</h4>
 				</div>
-				<section className="personal__section">
+				<section className="policy_content__section">
 					<p>
 						5.1. Оператор обрабатывает персональные данные Пользователя только в случае их
 						заполнения и/или отправки Пользователем самостоятельно через специальные формы,
@@ -218,13 +217,13 @@ export default function PersonalData() {
 					</p>
 				</section>
 
-				<div className="personal__subtitle">
+				<div className="policy_content__subtitle">
 					<h4>
 						<span>6.</span> Порядок сбора, хранения, передачи и других видов обработки персональных
 						данных
 					</h4>
 				</div>
-				<section className="personal__section">
+				<section className="policy_content__section">
 					<p>
 						Безопасность персональных данных, которые обрабатываются Оператором, обеспечивается
 						путем реализации правовых, организационных и технических мер, необходимых для выполнения
@@ -260,12 +259,12 @@ export default function PersonalData() {
 					</p>
 				</section>
 
-				<div className="personal__subtitle">
+				<div className="policy_content__subtitle">
 					<h4>
 						<span>7.</span> Трансграничная передача персональных данных
 					</h4>
 				</div>
-				<section className="personal__section">
+				<section className="policy_content__section">
 					<p>
 						7.1. Оператор до начала осуществления трансграничной передачи персональных данных обязан
 						убедиться в том, что иностранным государством, на территорию которого предполагается
@@ -281,12 +280,12 @@ export default function PersonalData() {
 					</p>
 				</section>
 
-				<div className="personal__subtitle">
+				<div className="policy_content__subtitle">
 					<h4>
 						<span>8.</span> Заключительные положения
 					</h4>
 				</div>
-				<section className="personal__section">
+				<section className="policy_content__section">
 					<p>
 						8.1. Пользователь может получить любые разъяснения по интересующим вопросам, касающимся
 						обработки его персональных данных, обратившись к Оператору с помощью электронной почты{" "}
