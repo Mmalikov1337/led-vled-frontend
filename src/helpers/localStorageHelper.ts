@@ -2,12 +2,11 @@ import DeliveryDataDTO from "@src/types/DeliveryDataDTO";
 import OrderDataDTO from "@src/types/OrderDataDTO";
 import PaymentDataDTO from "@src/types/PaymentDataDTO";
 import React from "react";
-import { productStorageName, productsQuantity } from "./../config";
+import { productStorageName, productsQuantity, tempItems, tempDeliveryData } from "./../config";
 
 class LocalStorageHepler {
 	stateFunction: React.Dispatch<React.SetStateAction<number[] | number>> | null;
 
-	
 	constructor(stateFunction: React.Dispatch<React.SetStateAction<number[] | number>> | null) {
 		this.stateFunction = stateFunction;
 	}
@@ -74,7 +73,7 @@ class LocalStorageHepler {
 	}
 	/* NAVBAR */
 	setProductQuantity() {
-		this.stateFunction(this.getProductQuantity())
+		this.stateFunction(this.getProductQuantity());
 	}
 	getProductQuantity() {
 		const products = this.getSelectedProducts();
@@ -124,6 +123,36 @@ class LocalStorageHepler {
 			return null;
 		}
 		return JSON.parse(stringifyed) as PaymentDataDTO;
+	}
+	/*RAIF */
+
+	countTotalPrice(): number | null {
+		const selectedProducts = JSON.parse(
+			LocalStorageHepler.getFromStorage("selectedProducts")
+		) as Array<number>;
+		const deliveryData = JSON.parse(
+			LocalStorageHepler.getFromStorage("deliveryData")
+		) as DeliveryDataDTO;
+		const deliveryCost = tempDeliveryData.find((it) => it.method == deliveryData.method);
+
+		if (!selectedProducts || !deliveryData) {
+			return null;
+		}
+		if (!deliveryCost) {
+			console.log("Wrong delivery method LS countTotalPrice");
+			return null;
+		}
+		if (!deliveryCost.price) {
+			console.log("Wrong deliveryCost.price LS countTotalPrice");
+			return null;
+		}
+		const productSum = selectedProducts.reduce((acc, i, index) => {
+			acc += Number(tempItems[index].price);
+			return acc;
+		}, 0);
+		const final = productSum + deliveryCost.price;
+		this.stateFunction(final)
+		return final;
 	}
 }
 

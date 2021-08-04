@@ -32,7 +32,13 @@ export default function Payment() {
 		if (!selectedPayment || !selectedPayment.dataset.payment) {
 			return;
 		}
-		ls.setPaymentData(new PaymentDataDTO(selectedPayment.dataset.payment));
+		const paymentData = new PaymentDataDTO(selectedPayment.dataset.payment);
+		ls.setPaymentData(paymentData);
+
+		/*DEV */
+		Router.push(`/order/payment/${paymentData.method}`);
+		return
+		/*DEV */
 
 		const payload = {
 			basket: ls.getSelectedProducts().map((it, index) => {
@@ -51,9 +57,13 @@ export default function Payment() {
 			body: JSON.stringify(payload),
 		});
 
-		if(!response.ok) return
+		if (!response.ok) return;
+		if (paymentData.method === "on_receiving") {
+			setIsCompleted(true);
+			return;
+		}
+		Router.push(`/order/payment/${paymentData.method}`);
 		
-		setIsCompleted(true);
 	};
 
 	React.useEffect(() => {
@@ -110,11 +120,11 @@ export default function Payment() {
 							</div>
 						</label>
 						<label>
-							<input type="radio" name="delivery" data-payment="yandex" />
+							<input type="radio" name="delivery" data-payment="raif" />
 							<span className="rad_button"></span>
 							<div className="payment__list__wrapper">
 								<p className="payment__list__top">
-									<span className="dpayment__list__top__left">Яндекс.Касса</span>
+									<span className="dpayment__list__top__left">Райф касса</span>
 								</p>
 								<p className="payment__list__bottom">
 									<span className="payment__list__bottom__left">

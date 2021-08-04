@@ -1,8 +1,8 @@
 export default class PaymentDataDTO {
-	method: string;
+	method: methodsAllowed;
 
 	constructor(
-		method: string,
+		method: methodsAllowed,
 	) {
 		this.method = method;
 	}
@@ -11,3 +11,4 @@ export default class PaymentDataDTO {
         return {...this}
     }
 }
+type methodsAllowed = "on_receiving" | "raif" | "sber"

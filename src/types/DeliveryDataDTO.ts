@@ -1,13 +1,12 @@
 export default class DeliveryDataDTO {
 	method: string;
-
-	constructor(
-		method: string,
-	) {
+	price?: number;
+	constructor(method: string, price?: number) {
 		this.method = method;
+		if (price) this.price = price;
 	}
 
-    getPlainObject(){
-        return {...this}
-    }
+	getPlainObject() {
+		return { ...this };
+	}
 }

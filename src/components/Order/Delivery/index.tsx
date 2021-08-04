@@ -12,7 +12,7 @@ export default function Delivery() {
 	const submit = () => {
 		const selectedMethod = methodsRef.current.querySelector(`input[type='radio']:checked`);
 		if (!selectedMethod || !selectedMethod.dataset.method) {
-			console.log("no method");
+			console.log("wrong method");
 			return;
 		}
 		ls.setDeliveryData(new DeliveryDataDTO(selectedMethod.dataset.method));

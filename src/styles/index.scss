@@ -2,6 +2,7 @@
 @import "./Order/Delivery/Delivery.scss";
 @import "./Order/Payment/Payment.scss";
 @import "./Order/Order.scss";
+@import "./Order/Payment/Raif/Raif.scss";
 
 @import "./StartPage/StartPageComposition/StartPageComposition.scss";
 @import "./StartPage/StartPageHeader/StartPageHeader.scss";
@@ -26,7 +27,7 @@
 @import "./PopupLayout.scss";
 
 @import "./../assets/fonts/CeraRoundPro/stylesheet.css";
-// @import "./common.scss";
+@import "./common.scss";
 body {
 	margin: 0;
 	overflow-x: hidden !important;

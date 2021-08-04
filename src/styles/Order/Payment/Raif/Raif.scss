@@ -1,0 +1,57 @@
+.raif {
+    display: flex;
+    align-items: center;
+
+    h3 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    &__sumtext {
+        margin: 50px 0;
+        color: #717171;
+        font-weight: 500;
+        font-size: 24px;
+
+        span {
+            color: #000000;
+            font-weight: bold;
+            font-size: 36px;
+        }
+    }
+
+    &__button {
+        margin-right: 20px;
+    }
+
+    &__input_wrapper {
+        margin-bottom: 100px;
+    }
+
+    &__text {
+
+        font-weight: 500;
+        font-size: 18px;
+
+        &-gray {
+            font-size: 15px;
+            line-height: 25px;
+            /* or 167% */
+            max-width: 600px;
+
+            color: #717171;
+
+            span {
+                font-weight: bold;
+            }
+
+            margin-bottom: 0;
+        }
+    }
+}
