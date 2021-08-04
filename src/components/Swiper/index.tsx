@@ -130,7 +130,7 @@ const Feedback = ({ currentPage }) => {
 						<span>info@ledvled.ru</span>
 					</div>
 					<div className="blue_page__footer__wrapper__feedback__adress">
-						<span>ООО «Глобал» г. Россия, Омск, ул. Звездова 129</span>
+						<span>ООО «Глобал» Россия, г.Омск, ул. Звездова 129</span>
 					</div>
 				</React.Fragment>
 			)}
