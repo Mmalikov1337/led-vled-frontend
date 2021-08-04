@@ -163,7 +163,7 @@ function OrderLayout(props) {
 								<span>info@ledvled.ru</span>
 							</div>
 							<div className="order__footer__wrapper__feedback__adress">
-								<span>ООО «Глобал» г. Омск, ул. Звездова 129</span>
+								<span>ООО «Глобал» г. Россия, Омск, ул. Звездова 129</span>
 							</div>
 						</div>
 					</div>
