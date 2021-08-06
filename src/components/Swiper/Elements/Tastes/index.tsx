@@ -78,7 +78,7 @@ export default function Tastes() {
 					</div>
 				</div>
 				<div className="tastes__slider">
-					<div className="tastes__slider__button" onClick={prewSlide}>
+					<button className="tastes__slider__button" onClick={prewSlide}>
 						<svg
 							width="9"
 							height="15"
@@ -91,7 +91,7 @@ export default function Tastes() {
 								fill="#56BDFF"
 							/>
 						</svg>
-					</div>
+					</button>
 
 					<div className="tastes__slider__content" id="slider">
 						{" "}
@@ -180,13 +180,9 @@ export default function Tastes() {
 									))}
 								</div>
 								<div
-									className="tastes__slider__slide__button"
+									className="tastes__slider__slide__button btn b-yellow btn-sm"
 									onClick={
 										() => {}
-										// ChangeQuantity.setSelectedQuantityToStorage(
-										// 	index,
-										// 	selectedQuantity[index]
-										// )
 									}
 								>
 									<div>
@@ -211,7 +207,7 @@ export default function Tastes() {
 						))}
 					</div>
 
-					<div className="tastes__slider__button" onClick={nextSlide}>
+					<button className="tastes__slider__button" onClick={nextSlide}>
 						<svg
 							width="9"
 							height="15"
@@ -224,7 +220,7 @@ export default function Tastes() {
 								fill="#56BDFF"
 							/>
 						</svg>
-					</div>
+					</button>
 				</div>
 			</div>
 		</div>

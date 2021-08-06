@@ -1,3 +1,7 @@
+import MapButton from "@src/components/Buttons/MapNuttom";
+import NextButton from "@src/components/Buttons/NextButton";
+import { catalogURL } from "@src/config";
+import toPage from "@src/helpers/toPage";
 import Link from "next/link";
 import React from "react";
 // import { NavLink } from 'react-router-dom'
@@ -11,45 +15,23 @@ export default function Contacts({ onLoad }) {
 				</div>
 				<div className="contacts__content__bottom">
 					<div className="contacts__content__bottom__buttons">
-						<div className="contacts__content__bottom__buttons_to_catalog">
-							<div>
-								<span>На карте</span>
-								<div>
-									<svg
-										width="13"
-										height="15"
-										viewBox="0 0 13 15"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M6.5 0C3.35 0 0.787109 2.56289 0.787109 5.71289C0.787109 6.95947 1.18086 8.14394 1.92676 9.1377L6.14785 14.8228C6.1584 14.8366 6.17451 14.8418 6.18623 14.8541C6.39717 15.08 6.70156 15.0232 6.85186 14.8228C8.06738 13.2009 10.2954 10.1719 11.1521 9.0293C11.1521 9.0293 11.1523 9.02842 11.1526 9.02783L11.1579 9.0208C11.8481 8.05107 12.2129 6.90732 12.2129 5.71289C12.2129 2.56289 9.65 0 6.5 0ZM6.5 8.79492C4.804 8.79492 3.41797 7.40889 3.41797 5.71289C3.41797 4.01689 4.804 2.63086 6.5 2.63086C8.196 2.63086 9.58203 4.01689 9.58203 5.71289C9.58203 7.40889 8.196 8.79492 6.5 8.79492Z"
-											fill="#008CE6"
-										/>
-									</svg>
-								</div>
-							</div>
-						</div>
 						{/* <NavLink to="/catalog"> */}
-						<div className="contacts__content__bottom__buttons_to_map">
-							<div>
-								<span>Каталог</span>
-								<div>
-									<svg
-										width="9"
-										height="15"
-										viewBox="0 0 9 15"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M8.66685 6.9147L1.99166 0.239632C1.83727 0.0851213 1.63118 0 1.41142 0C1.19167 0 0.985572 0.0851213 0.831183 0.239632L0.339602 0.731092C0.0197263 1.05133 0.0197263 1.57182 0.339602 1.89157L5.94492 7.49689L0.333382 13.1084C0.178993 13.2629 0.09375 13.4689 0.09375 13.6885C0.09375 13.9084 0.178993 14.1144 0.333382 14.269L0.824964 14.7604C0.979475 14.9149 1.18545 15 1.4052 15C1.62496 15 1.83105 14.9149 1.98544 14.7604L8.66685 8.0792C8.82161 7.9242 8.90661 7.71725 8.90612 7.49726C8.90661 7.2764 8.82161 7.06958 8.66685 6.9147Z"
-											fill="white"
-										/>
-									</svg>
-								</div>
-							</div>
-						</div>
+
+						<MapButton
+							classes={["btn", "b-white", "btn-sm", "contacts__content__bottom__buttons_to_map"]}
+							onClick={() => {
+								toPage(catalogURL)
+							}}
+							text="На карте"
+						/>
+
+						<NextButton
+							classes={["btn", "b-yellow", "btn-sm", "contacts__content__bottom__buttons_to_catalog"]}
+							onClick={() => {
+								toPage(catalogURL)
+							}}
+							text="Каталог"
+						/>
 						{/* </NavLink> */}
 					</div>
 					<div className="contacts__content__bottom__contacts">

@@ -70,7 +70,7 @@ export default function Raif() {
 						Сумма к оплате по счету:<span> {total}₽</span>
 					</p>
 					<div className="raif__input_wrapper">
-						<button className="raif__button btn b-red" onClick={submit}>
+						<button className="raif__button btn b-red btn-md" onClick={submit}>
 							<div>
 								<span>Оплатить</span>
 								<div>

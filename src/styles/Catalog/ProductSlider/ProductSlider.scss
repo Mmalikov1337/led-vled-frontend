@@ -76,38 +76,7 @@
 					z-index: 5;
 					width: 200px;
 
-					div {
-						cursor: pointer;
-						width: 185px;
-						height: 60px;
-						background: #FFFFFF;
-						box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
-						border-radius: 15px;
-						display: flex;
-						align-items: center;
-						justify-content: center;
 
-
-						span {
-							font-weight: bold;
-							font-size: 18px;
-							color: rgb(0, 0, 0);
-						}
-
-						div {
-							background: linear-gradient(135deg, #F2F2F2 0%, #FFFFFF 100%);
-							box-shadow: -5px 5px 10px rgba(224, 224, 224, 0.2), 5px -5px 10px rgba(224, 224, 224, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(224, 224, 224, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(224, 224, 224, 0.5);
-							border-radius: 15px;
-							width: 30px;
-							height: 30px;
-							display: flex;
-							align-content: center;
-							justify-content: center;
-							margin: 0 0 0 15px;
-
-							svg {}
-						}
-					}
 				}
 
 				&__phone {
@@ -253,20 +222,6 @@
 	.active-line {
 		animation: circle 11.2s linear; ////!!!!!!!!!!!!!!! animation
 		stroke: #008CE6;
-	}
-
-	// svg {}
-
-	// .zxc {
-	// 	/* stroke-dashoffset:1111.604 !important; */
-	// 	stroke-dashoffset: 1700.72;
-	// }
-
-	button {
-		position: absolute;
-		z-index: 1000;
-		top: 200px;
-		left: 200px;
 	}
 
 	@keyframes circle {

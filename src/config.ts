@@ -52,7 +52,8 @@ export interface ICompositionLink {
 // });
 
 export const serverURL = "http://localhost:3001";
-
+export const catalogURL = "/catalog"
+export const cartURL = "/cart"
 export const productStorageName = "selectedProducts";
 export const productsQuantity = 5;
 

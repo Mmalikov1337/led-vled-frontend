@@ -1,12 +1,15 @@
 $bgColor:#FBFCFD;
 $primary:#2196F3;
+
 .link {
     text-decoration: none;
     color: #008CE6;
 }
+
 .bold{
     font-style: bold;
 }
+
 .btn {
     div {
         cursor: pointer;
@@ -33,14 +36,11 @@ $primary:#2196F3;
             // svg {}
         }
     }
-
-
 }
 
 .b-red {
     padding: 0;/////// проверить на других, нужен ли паддинг
     div {
-        width: 200px;
         background: #FF4E5A;
         box-shadow: 0px 16px 24px rgba(239, 45, 59, 0.2), 0px 2px 6px rgba(239, 45, 59, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.04);
 
@@ -53,5 +53,92 @@ $primary:#2196F3;
             background: #FF4E5A;
             box-shadow: -5px 5px 10px rgba(224, 70, 82, 0.2), 5px -5px 10px rgba(224, 70, 82, 0.2), -5px -5px 10px rgba(255, 86, 100, 0.9), 5px 5px 13px rgba(224, 70, 82, 0.9), inset 1px 1px 2px rgba(255, 86, 100, 0.3), inset -1px -1px 2px rgba(224, 70, 82, 0.5);
         }
+    }
+}
+
+.b-yellow {
+    div {
+        background: #FFC700;
+        box-shadow: 0px 16px 24px rgba(239, 45, 59, 0.2), 0px 2px 6px rgba(239, 45, 59, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.04);
+
+
+        span {
+            color: rgb(0, 0, 0);
+        }
+
+        div {
+            background: linear-gradient(135deg, #F2BD00 0%, #FFD100 100%);
+            box-shadow: -5px 5px 10px rgba(224, 179, 0, 0.2), 5px -5px 10px rgba(224, 179, 0, 0.2), -5px -5px 10px rgba(255, 219, 0, 0.9), 5px 5px 13px rgba(224, 179, 0, 0.9), inset 1px 1px 2px rgba(255, 219, 0, 0.3), inset -1px -1px 2px rgba(224, 179, 0, 0.5);
+        }
+    }
+}
+
+.b-white {
+    div {
+        background: #ffffff;
+        box-shadow: 0px 16px 24px #027FD0, 0px 2px 6px rgba(2, 127, 208, 0.12), 0px 0px 1px rgba(47, 47, 47, 0.04);
+
+        span {
+            color: rgb(0, 0, 0);
+        }
+
+        div {
+            background: linear-gradient(135deg, #F2F2F2 0%, #FFFFFF 100%);
+            box-shadow: -5px 5px 10px rgba(224, 224, 224, 0.2), 5px -5px 10px rgba(224, 224, 224, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(224, 224, 224, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(224, 224, 224, 0.5);
+        }
+    }
+}
+.b-white-nosh {
+    div {
+        background: #ffffff;
+
+        span {
+            color: rgb(0, 0, 0);
+        }
+
+        div {
+            background: linear-gradient(135deg, #F2F2F2 0%, #FFFFFF 100%);
+            box-shadow: -5px 5px 10px rgba(224, 224, 224, 0.2), 5px -5px 10px rgba(224, 224, 224, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(224, 224, 224, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(224, 224, 224, 0.5);
+        }
+    }
+}
+.b-white-sh {
+    div {
+        background: #ffffff;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+
+        span {
+            color: rgb(0, 0, 0);
+        }
+
+        div {
+            background: linear-gradient(135deg, #F2F2F2 0%, #FFFFFF 100%);
+            box-shadow: -5px 5px 10px rgba(224, 224, 224, 0.2), 5px -5px 10px rgba(224, 224, 224, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(224, 224, 224, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(224, 224, 224, 0.5);
+        }
+    }
+}
+.btn-sm{
+    div {
+        width: 185px;
+    }
+}
+.btn-md{
+    div {
+        width: 200px;
+    }
+}
+.btn-bg{
+    div {
+        width: 210px;
+    }
+}
+.btn-lg{
+    div {
+        width: 280px;
+    }
+    span {
+        font-family: 'Cera Round Pro';
+        font-weight: bold;
+        font-size: 18px;
     }
 }

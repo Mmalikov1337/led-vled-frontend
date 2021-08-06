@@ -8,13 +8,14 @@ import drinkSVG from "@images/drink.svg";
 import starSVG from "@images/star_full.svg";
 import arrow_downSVG from "@images/arrow_down.svg";
 import shadowPNG from "@images/shadow.png";
-import { tempItems, ICompositionLink } from "@src/config";
+import { tempItems, ICompositionLink, catalogURL } from "@src/config";
+import toPage from "@src/helpers/toPage";
 interface ICircle {
 	color: string;
 	width: string;
 	height: string;
 }
-const Circle = ({ color, width, height }:ICircle) => {
+const Circle = ({ color, width, height }: ICircle) => {
 	return (
 		<svg width={width} height={height} viewBox="0 0 582 582" xmlns="http://www.w3.org/2000/svg">
 			<circle id="svg_1" fill={color} cx="291" cy="291" r="291" viewBox="0 0 582 582" />
@@ -50,17 +51,7 @@ export default function Composition({ nextPage, links }: IComposition) {
 			text: "Подходит для добавления в коктейли",
 		},
 	];
-	// React.useEffect(() => {
-	// 	document.body.style.overflow = "hidden";
-	// 	const scrollTo = () => {
-	// 		Scroll.scroller.scrollTo(links[0].id, {
-	// 			duration: 1000,
-	// 			delay: 0,
-	// 			smooth: true,
-	// 		});
-	// 	};
-	// 	scrollTo();
-	// }, []);
+	
 
 	return (
 		<div className="startpage">
@@ -104,11 +95,7 @@ export default function Composition({ nextPage, links }: IComposition) {
 												>
 													<path
 														d="M9.99308 0.403893C9.21741 0.40694 8.56316 0.886211 8.32636 1.6249L6.79891 6.38961H1.7612C0.984512 6.38961 0.328118 6.86712 0.08901 7.60608C-0.150137 8.34504 0.102094 9.11658 0.731617 9.5716L4.79079 12.5056L3.23655 17.2891C2.99654 18.0278 3.24784 18.7996 3.87677 19.2553C4.50567 19.7111 5.3174 19.7096 5.94465 19.2516L9.99996 16.2901C10 16.2901 10 0.403854 10 0.403854C9.99773 0.403854 9.99535 0.403854 9.99308 0.403893Z"
-														fill={
-															index + 1 <= (hover || rating)!!
-																? "#FFC800"
-																: "#E4E4E4"
-														}
+														fill={index + 1 <= (hover || rating)!! ? "#FFC800" : "#E4E4E4"}
 													/>
 													{/* < "#E4E4E4"*/}
 												</svg>
@@ -132,11 +119,7 @@ export default function Composition({ nextPage, links }: IComposition) {
 													<path
 														stroke="null"
 														id="svg_1"
-														fill={
-															index + 1 <= (hover || rating)!!
-																? "#FFC800"
-																: "#E4E4E4"
-														}
+														fill={index + 1 <= (hover || rating)!! ? "#FFC800" : "#E4E4E4"}
 														d="m0.029625,0.40389c0.772143,0.00305 1.423418,0.48232 1.659141,1.22101l1.520504,4.76471l5.014801,0c0.773158,0 1.426563,0.47751 1.664586,1.21647c0.238062,0.73896 -0.013021,1.5105 -0.639688,1.96552l-4.040711,2.934l1.547172,4.7835c0.238919,0.7387 -0.011239,1.5105 -0.637309,1.9662c-0.62604,0.4558 -1.434079,0.4543 -2.058476,-0.0037l-4.036869,-2.9615c-0.00004,0 -0.00004,-15.88625 -0.00004,-15.88625c0.00226,0 0.004629,0 0.006889,0.00004z"
 													/>
 												</svg>
@@ -149,17 +132,11 @@ export default function Composition({ nextPage, links }: IComposition) {
 								</div>
 							</div>
 							<div className="startpage__description__content__text">
-								<p>
-									Вкусное мороженное для детей и взрослых Подходит для добавления
-									в коктейли
-								</p>
+								<p>Вкусное мороженное для детей и взрослых Подходит для добавления в коктейли</p>
 							</div>
 							<div className="startpage__description__content__properties">
 								{tempProps.map((i, index) => (
-									<div
-										className="startpage__description__content__properties__item"
-										key={index}
-									>
+									<div className="startpage__description__content__properties__item" key={index}>
 										<div className="startpage__description__content__properties__item__pic">
 											<img src={i.image} alt={`${index}_pic`} />
 										</div>
@@ -167,9 +144,7 @@ export default function Composition({ nextPage, links }: IComposition) {
 									</div>
 								))}
 							</div>
-							{/* <NavLink to="/catalog"> */}
-
-							<div className="startpage__description__content__button">
+							<button className="startpage__description__content__button btn b-red btn-lg" onClick={() => toPage(catalogURL)}>
 								<div>
 									<span>Перейти в каталог</span>
 									<div>
@@ -187,36 +162,21 @@ export default function Composition({ nextPage, links }: IComposition) {
 										</svg>
 									</div>
 								</div>
-							</div>
-
-							{/* </NavLink> */}
+							</button>
 						</div>
 					</div>
 					<div className="startpage__items">
 						<div className="startpage__items__main">
 							<div className="startpage__items__main__section">
 								<div className="startpage__items__main__section__item">
-									
 									<div className="startpage__items__main__section__item__content">
-									<div className="startpage__items__main__section__item__rating">
-										{tempItems[selectedItem].rating}
-										<img src={starSVG} alt="starSVG" />
-									</div>
-										<Circle
-											color={tempItems[selectedItem].mainColor}
-											width="582"
-											height="582"
-										/>
-										<img
-											src={shadowPNG}
-											alt="starSVG"
-											className="side_pic shadow"
-										/>
-										<img
-											src={tempItems[selectedItem].pic}
-											alt="prodPNG"
-											className="side_pic"
-										/>
+										<div className="startpage__items__main__section__item__rating">
+											{tempItems[selectedItem].rating}
+											<img src={starSVG} alt="starSVG" />
+										</div>
+										<Circle color={tempItems[selectedItem].mainColor} width="582" height="582" />
+										<img src={shadowPNG} alt="starSVG" className="side_pic shadow" />
+										<img src={tempItems[selectedItem].pic} alt="prodPNG" className="side_pic" />
 									</div>
 								</div>
 							</div>
@@ -230,28 +190,16 @@ export default function Composition({ nextPage, links }: IComposition) {
 										<div
 											className="startpage__items__side__section__item"
 											key={index}
-											onClick={() => setSelectedItem(it.id-1)}
+											onClick={() => setSelectedItem(it.id - 1)}
 										>
 											<div className="startpage__items__side__section__item__rating">
 												{it.rating}
 												<img src={starSVG} alt="starSVG" />
 											</div>
 											<div className="startpage__items__side__section__item__content">
-												<Circle
-													color={it.mainColor}
-													width="147"
-													height="147"
-												/>
-												<img
-													src={shadowPNG}
-													alt="starSVG"
-													className="side_pic shadow"
-												/>
-												<img
-													src={it.pic}
-													alt="prodPNG"
-													className="side_pic"
-												/>
+												<Circle color={it.mainColor} width="147" height="147" />
+												<img src={shadowPNG} alt="starSVG" className="side_pic shadow" />
+												<img src={it.pic} alt="prodPNG" className="side_pic" />
 												<div />
 											</div>
 										</div>
