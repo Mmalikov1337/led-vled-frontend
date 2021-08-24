@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import logoSVG from "@images/logo.svg";
 import phoneSVG from "@images/phone.svg";
 import cartSVG from "@images/cart.svg";
-import LocalStorageHepler from "@src/helpers/localStorageHelper";
 
 interface IStartPageHeader {
 	extraClass?: string;
