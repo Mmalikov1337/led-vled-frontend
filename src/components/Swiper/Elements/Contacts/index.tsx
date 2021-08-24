@@ -4,6 +4,10 @@ import { catalogURL } from "@src/config";
 import toPage from "@src/helpers/toPage";
 import Link from "next/link";
 import React from "react";
+
+import mastercardPNG from "@images/mastercard53.png";
+import visaPNG from "@images/visa_white.png";
+import mirpng from "@images/mir.png";
 // import { NavLink } from 'react-router-dom'
 
 export default function Contacts({ onLoad }) {
@@ -20,15 +24,20 @@ export default function Contacts({ onLoad }) {
 						<MapButton
 							classes={["btn", "b-white", "btn-sm", "contacts__content__bottom__buttons_to_map"]}
 							onClick={() => {
-								toPage(catalogURL)
+								toPage(catalogURL);
 							}}
 							text="На карте"
 						/>
 
 						<NextButton
-							classes={["btn", "b-yellow", "btn-sm", "contacts__content__bottom__buttons_to_catalog"]}
+							classes={[
+								"btn",
+								"b-yellow",
+								"btn-sm",
+								"contacts__content__bottom__buttons_to_catalog",
+							]}
 							onClick={() => {
-								toPage(catalogURL)
+								toPage(catalogURL);
 							}}
 							text="Каталог"
 						/>
@@ -153,7 +162,11 @@ export default function Contacts({ onLoad }) {
 									</Link>
 								</p>
 							</div>
-
+							<div className="logoHolder">
+								<img className="pay_logo" src={mastercardPNG} alt="logo" />
+								<img className="pay_logo" src={visaPNG} alt="logo" />
+								<img className="pay_logo" src={mirpng} alt="logo" />
+							</div>
 						</div>
 					</div>
 				</div>
