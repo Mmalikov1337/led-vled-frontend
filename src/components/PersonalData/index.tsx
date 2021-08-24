@@ -304,5 +304,6 @@ export default function PersonalData() {
 				</section>
 			</div>
 		</div>
+	
 	);
 }

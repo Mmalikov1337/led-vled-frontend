@@ -127,6 +127,32 @@ export default function Contacts({ onLoad }) {
 									</Link>
 								</p>
 							</div>
+							<div
+								className={`${
+									onLoad
+										? "contacts__content__bottom__contacts__policy-ref contacts__content__bottom__contacts__policy--active"
+										: "contacts__content__bottom__contacts__policy-ref "
+								}`}
+							>
+								<p>
+									<Link href="/payment-policy">
+										<a>Описание процесса оплаты</a>
+									</Link>
+								</p>
+							</div>
+							<div
+								className={`${
+									onLoad
+										? "contacts__content__bottom__contacts__policy-ref contacts__content__bottom__contacts__policy--active"
+										: "contacts__content__bottom__contacts__policy-ref "
+								}`}
+							>
+								<p>
+									<Link href="/requisites-policy">
+										<a>Реквизиты юр.лица</a>
+									</Link>
+								</p>
+							</div>
 
 						</div>
 					</div>
