@@ -105,7 +105,7 @@ export default function Contacts({ onLoad }) {
 							>
 								<p>
 									<Link href="/privacy-policy">
-										<a>Политика в области обработки персональных данных</a>
+										<a className="link-reset">Политика в области обработки персональных данных</a>
 									</Link>
 								</p>
 							</div>
@@ -118,7 +118,7 @@ export default function Contacts({ onLoad }) {
 							>
 								<p>
 									<Link href="/refund-policy">
-										<a>Политика в области возврата</a>
+										<a className="link-reset">Политика в области возврата</a>
 									</Link>
 								</p>
 							</div>
@@ -132,7 +132,7 @@ export default function Contacts({ onLoad }) {
 							>
 								<p>
 									<Link href="/delivery-policy">
-										<a>Условия доставки</a>
+										<a className="link-reset">Условия доставки</a>
 									</Link>
 								</p>
 							</div>
@@ -145,7 +145,7 @@ export default function Contacts({ onLoad }) {
 							>
 								<p>
 									<Link href="/payment-policy">
-										<a>Описание процесса оплаты</a>
+										<a className="link-reset">Описание процесса оплаты</a>
 									</Link>
 								</p>
 							</div>
@@ -158,7 +158,7 @@ export default function Contacts({ onLoad }) {
 							>
 								<p>
 									<Link href="/requisites-policy">
-										<a>Реквизиты юр.лица</a>
+										<a className="link-reset">Реквизиты юр.лица</a>
 									</Link>
 								</p>
 							</div>
