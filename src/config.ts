@@ -39,7 +39,6 @@ import leaf4_3 from "@images/leaf4_3.png";
 import tarragon_bg2 from "@images/tarragon_bg2.png";
 import tarragon_secondary from "@images/tarragon_secondary.png";
 
-import PaymentPageSdk from "@raiffeisen-ecom/payment-sdk";
 export interface ICompositionLink {
 	id: string;
 	style: {
